@@ -1,0 +1,22 @@
+{% extends 'portal/main.html' %}
+
+{% load static %}
+{% block content %}
+<h1 style="align-items: center;">ERROR REPORT</h1>
+<table class="table">
+    <thead>
+        <th>Date</th>
+        <th>Error ID</th>
+        <th> Error Description</th>
+    </thead>
+    {% for result in error_results_dict %}
+    <tbody>
+
+        <td>{{result.errordatetime}}</td>
+        <td>{{result.errorid}}</td>
+        <td>{{result.errordescription}}</td>
+
+    </tbody>
+    {% endfor %}
+</table>
+{% endblock content %}
