@@ -1,0 +1,41 @@
+{% extends 'portal/main.html' %}
+
+{% load static %}
+{% block content %}
+<h1 style="align-items: center;">People</h1>
+<table class="table">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+    </thead>
+    {% for result in people_results_dict %}
+    <tbody>
+
+        <td>{{result.personid}}</td>
+        <td>{{result.friendlyname}}</td>
+
+    </tbody>
+    {% endfor %}
+</table>
+<h1 style="align-items: center;">ERROR REPORT</h1>
+<table class="table">
+    <thead>
+        <th>Error Date</th>
+        <th>Error ID</th>
+        <th>Error Description</th>
+        <th>Assigned Date</th>
+        <th>Assigner Id </th>
+    </thead>
+    {% for result in error_results_dict %}
+    <tbody>
+
+        <td>{{result.errordatetime}}</td>
+        <td>{{result.errorid}}</td>
+        <td>{{result.errordescription}}</td>
+        <td>{{result.assigneddatetime}}</td>
+        <td>{{result.assignerid}}</td>
+
+    </tbody>
+    {% endfor %}
+</table>
+{% endblock content %}
