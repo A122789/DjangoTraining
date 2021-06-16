@@ -6,8 +6,13 @@ urlpatterns = [
     path(
         "errorreport/",
         views.get_error_details,
+<<<<<<< HEAD
         #views.get_people_details,
         name="customer_search_results",
     ),
 
+=======
+        name="customer_search_results",
+    ),
+>>>>>>> origin
 ]

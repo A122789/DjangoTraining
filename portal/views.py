@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from portal.models import (
     error,
+<<<<<<< HEAD
     assigner
 )
 import logging, sys
@@ -16,6 +17,10 @@ out_hdlr.setLevel(logging.INFO)  # Setting the lowest levels of stuff we want to
 log.addHandler(out_hdlr)  # Attaching the stream Handler we defined to the main logger
 
 log.setLevel(logging.INFO)  # Setting the lowest level of stuff we want to capture with the logger. Again (INFO, WARNING, ERROR,...)
+=======
+)
+
+>>>>>>> origin
 # Create your views here.
 
 
@@ -23,6 +28,7 @@ def get_error_details(request):
 
     # Calling Get method
     # if request.method == "GET":
+<<<<<<< HEAD
     error_results = error.objects.order_by("-errordatetime")[:20]
 
     log.info(error_results[0].errordatetime)
@@ -36,6 +42,15 @@ def get_error_details(request):
     }
 
     log.info(context)
+=======
+    error_results = error.objects.order_by("errordatetime")[:10]
+
+    context = {
+        "error_results_dict": error_results,
+    }
+
+    # log.info(context)
+>>>>>>> origin
     return render(request, "portal/errorreport.html", context)
 
 

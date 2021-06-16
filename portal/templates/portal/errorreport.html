@@ -2,6 +2,7 @@
 
 {% load static %}
 {% block content %}
+<<<<<<< HEAD
 <h1 style="align-items: center;">People</h1>
 <table class="table">
     <thead>
@@ -25,6 +26,14 @@
         <th>Error Description</th>
         <th>Assigned Date</th>
         <th>Assigner Id </th>
+=======
+<h1 style="align-items: center;">ERROR REPORT</h1>
+<table class="table">
+    <thead>
+        <th>Date</th>
+        <th>Error ID</th>
+        <th> Error Description</th>
+>>>>>>> origin
     </thead>
     {% for result in error_results_dict %}
     <tbody>
@@ -32,8 +41,11 @@
         <td>{{result.errordatetime}}</td>
         <td>{{result.errorid}}</td>
         <td>{{result.errordescription}}</td>
+<<<<<<< HEAD
         <td>{{result.assigneddatetime}}</td>
         <td>{{result.assignerid}}</td>
+=======
+>>>>>>> origin
 
     </tbody>
     {% endfor %}

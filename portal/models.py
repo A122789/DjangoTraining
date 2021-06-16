@@ -5,12 +5,16 @@ class error(models.Model):
     errordatetime = models.DateField(auto_now=False, auto_now_add=False)
     errorid = models.IntegerField(primary_key=True)
     errordescription = models.CharField(max_length=4000)
+<<<<<<< HEAD
     assigneddatetime = models.DateField(auto_now=False, auto_now_add=False)
     assignerid = models.IntegerField(primary_key=False)
+=======
+>>>>>>> origin
     # add more data
     class Meta:
         managed = False
         db_table = "Error_Log"
+<<<<<<< HEAD
 
 
 class assigner(models.Model):
@@ -24,3 +28,5 @@ class assigner(models.Model):
        managed = False
        db_table = "TeamMembers"
 
+=======
+>>>>>>> origin
